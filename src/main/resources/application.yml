@@ -16,10 +16,10 @@ spring:
         hibernate.use_sql_comments: true
         hibernate.format_sql: true
 
-springdoc:
-  show-actuator: true
-  paths-to-match: /**
-  packages-to-scan: com.farukgenc.boilerplate.springboot
+#springdoc:
+#  show-actuator: true
+#  paths-to-match: /**
+#  packages-to-scan: com.
 
 management:
   endpoint:
@@ -39,15 +39,27 @@ logging:
 
 jwt:
   secretKey: secret
-  issuer: www.utsav.com
-  expirationMinute: 10
+  issuer: www.kkk.com
+  expirationMinute: 100
 
 swagger:
-  contact-name: Utsav Tripathi
-  contact-mail: utsavtripathi2006@gmail.com
-  contact-url: https://utsav.com
+  contact-name: ...
+  contact-mail: ...
+  contact-url: https://...com
   app-name: Spring Boot Boilerplate Project
   app-description: "Spring Boot Boilerplate is a starter kit. This project includes : Spring Boot(2.7.4), Spring Data JPA, Spring Validation, Spring Security + JWT Token, PostgreSQL, Mapstruct, Lombok, Swagger"
   app-version: 2.0.0
   app-license-url: https://www.apache.org/licenses/LICENSE-2.0.html
   app-license: Apache 2.0
+
+openai-service:
+  api-key: ##########################
+  gpt-model: gpt-3.5-turbo
+  audio-model: whisper-1
+  http-client:
+    read-timeout: 3000
+    connect-timeout: 3000
+  urls:
+    base-url: https://api.openai.com/v1
+    chat-url: /chat/completions
+    create-transcription-url: /audio/transcriptions
